@@ -7,6 +7,7 @@ public class Accounts implements Comparable<Accounts>{
   private int customer_id;
   private double balance;
 //void constructor
+  //after edit
 public Accounts() {
 }
 //parameterized constructor
