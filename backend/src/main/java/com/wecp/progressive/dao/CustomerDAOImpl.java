@@ -52,13 +52,20 @@ public class CustomerDAOImpl implements CustomerDAO{
     @Override
     public void deleteCustomer(int customerId) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteCustomer'");
+        for(Customers c:custList){
+            if(c.getCustomer_id()==customerId){
+                 custList.remove(c);
+             
+            }
+        }
+        //throw new UnsupportedOperationException("Unimplemented method 'deleteCustomer'");
     }
 
     @Override
     public List<Customers> getAllCustomers() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAllCustomers'");
+        return custList;
+       // throw new UnsupportedOperationException("Unimplemented method 'getAllCustomers'");
     }
 
     @Override
