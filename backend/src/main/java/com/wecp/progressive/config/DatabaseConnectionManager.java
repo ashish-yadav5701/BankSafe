@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 import javax.management.RuntimeErrorException;
-
+//database connection using properties
 public class DatabaseConnectionManager {
   private static final Properties properties = new Properties();
   static {
