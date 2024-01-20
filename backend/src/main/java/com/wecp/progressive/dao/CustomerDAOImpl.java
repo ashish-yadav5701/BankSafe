@@ -17,14 +17,35 @@ public class CustomerDAOImpl implements CustomerDAO{
     }
 
     @Override
-    public Customers getCustomerById(int customerId) {
+    public Customers getCustomerById(int customerId)  {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCustomerById'");
-    }
+        boolean found=false;
+        Customers cfound=null;
+        for(Customers c:custList){
+            if(c.getCustomer_id()==customerId){
+                cfound=c;
+                found=true;
+                break;
+            }
+        }
+        if(found){
+            return cfound;
+        }
+        else{
+            throw new UnsupportedOperationException("record not found ");
+    
+        }
+        }
 
     @Override
     public void updateCustomer(Customers customers) {
         // TODO Auto-generated method stub
+        for(int i=0; i<custList.size();i++){
+            Customers p =custList.get(i);
+            if(customers.getCustomer_id()==p.getCustomer_id()){
+                custList.set(i, customers);
+            }
+        }
         throw new UnsupportedOperationException("Unimplemented method 'updateCustomer'");
     }
 
