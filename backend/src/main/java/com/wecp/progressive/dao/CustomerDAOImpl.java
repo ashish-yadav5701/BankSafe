@@ -1,16 +1,19 @@
 package com.wecp.progressive.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.wecp.progressive.dto.CustomerAccountInfo;
 import com.wecp.progressive.entity.Customers;
 
 public class CustomerDAOImpl implements CustomerDAO{
-
+  ArrayList<Customers> custList=new ArrayList<>();
     @Override
     public int addCustomer(Customers customers) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addCustomer'");
+        custList.add(customers);
+        return 1;
+       // throw new UnsupportedOperationException("Unimplemented method 'addCustomer'");
     }
 
     @Override

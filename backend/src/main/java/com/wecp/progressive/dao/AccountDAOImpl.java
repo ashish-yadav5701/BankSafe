@@ -19,7 +19,9 @@ public class AccountDAOImpl implements AccountDAO{
     
         //throw new UnsupportedOperationException("Unimplemented method 'addAccount'");
     }
-
+     public void addCustomerToArrayList(Accounts accounts){
+          acc.add(accounts);
+     }
     @Override
     public Accounts getAccountById(int accountId) {
         // TODO Auto-generated method stub
